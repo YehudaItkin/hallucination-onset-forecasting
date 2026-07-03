@@ -1,0 +1,16 @@
+[A3-leadtime] training forecaster (causal-24)...
+docs: clean=1757 hallu=943
+CUSUM ref k=(mu0+mu1)/2=-0.508
+
+ k     FA        det | recall medDelay %early  realFA | paired vs CUSUM
+--------------------------------------------------------------------------------------------
+ 3   0.01   forecast |   1.00    -51.0   0.99  0.0094 | Wilcoxon p=1.91e-75  McNemar b=101 c=0 p=7.89e-31
+               CUSUM |   0.95    -19.5   0.76  0.0094 |
+ 3  0.001   forecast |   0.46    -11.0   0.78  0.0009 | Wilcoxon p=2.63e-19  McNemar b=62 c=2 p=2.26e-16
+               CUSUM |   0.47    +15.0   0.29  0.0011 |
+ 5   0.01   forecast |   1.00    -51.0   0.99  0.0096 | Wilcoxon p=1.91e-75  McNemar b=101 c=0 p=7.89e-31
+               CUSUM |   0.95    -19.5   0.76  0.0094 |
+ 5  0.001   forecast |   0.48    -13.0   0.80  0.0009 | Wilcoxon p=1.45e-20  McNemar b=68 c=3 p=5.06e-17
+               CUSUM |   0.47    +15.0   0.29  0.0011 |
+
+GATE-A3-leadtime: forecaster fires before onset & beats CUSUM (FA=0.01, k in [3, 5]) in 2/2 horizons -> PASS: negative-delay forecasting

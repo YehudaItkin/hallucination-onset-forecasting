@@ -1,0 +1,10 @@
+[A2 ForwardGRU-hazard]  device=cuda  fset=full-33 (dim=33)
+
+    k |    ForwardGRU AUROC/PR |  A1 logistic (causal-24)
+----------------------------------------------------------
+    1 |            0.813/0.028 | 0.683/0.008
+    3 |            0.789/0.062 | 0.657/0.020
+    5 |            0.782/0.096 | 0.647/0.032
+   10 |            0.774/0.165 | 0.639/0.058
+
+GATE-A2  did GRU beat logistic @k=3?  0.789 vs 0.657  -> YES

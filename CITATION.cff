@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper below."
+title: "Forecasting the Onset of Hallucination: Causal, Token-Level, Black-Box Survival Analysis During Generation"
+authors:
+  - family-names: Itkin
+    given-names: Igor
+    orcid: "https://orcid.org/0009-0004-9513-8463"
+    affiliation: "Independent Researcher"
+type: software
+year: 2026
+license: MIT
+preferred-citation:
+  type: article
+  title: "Forecasting the Onset of Hallucination: Causal, Token-Level, Black-Box Survival Analysis During Generation"
+  authors:
+    - family-names: Itkin
+      given-names: Igor
+      orcid: "https://orcid.org/0009-0004-9513-8463"
+  year: 2026
+references:
+  - type: article
+    title: "Quickest Detection of Hallucination Onset: Delay Bounds and Learned CUSUM Statistics"
+    authors:
+      - family-names: Itkin
+        given-names: Igor
+    year: 2026
+    identifiers:
+      - type: other
+        value: "arXiv:2606.12476"
+        description: "Companion paper (onset detection)"
+  - type: article
+    title: "Temporal Multi-Signal Detection of Token-Level Hallucination"
+    authors:
+      - family-names: Itkin
+        given-names: Igor
+    year: 2026
+    identifiers:
+      - type: doi
+        value: "10.5281/zenodo.20977858"
+        description: "Prior work (feature pipeline)"

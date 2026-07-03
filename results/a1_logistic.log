@@ -1,0 +1,13 @@
+Building hazard datasets (reusing the paper's exact 33-dim pipeline)...
+train risk tokens=1,871,290  test risk tokens=327,056  (causal dims=24)
+
+  k   base% |        full-33 |      causal-24 | text-causal-18 |           lm-6
+-------------------------------------------------------------------------------
+  1    0.43 |    0.699/0.009 |    0.683/0.008 |    0.668/0.007 |    0.623/0.007
+  3    1.27 |    0.674/0.023 |    0.657/0.020 |    0.651/0.019 |    0.599/0.018
+  5    2.08 |    0.665/0.035 |    0.647/0.032 |    0.644/0.031 |    0.590/0.028
+ 10    4.00 |    0.658/0.064 |    0.639/0.058 |    0.637/0.057 |    0.585/0.052
+
+(cells = AUROC / PR-AUC ; base% = risk-set positive rate)
+
+GATE  causal-24 AUROC@3 = 0.657  -> PASS, proceed to A2 (Hawkes)

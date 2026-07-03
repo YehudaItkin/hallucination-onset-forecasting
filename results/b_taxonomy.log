@@ -1,0 +1,26 @@
+[Phase B] training forecaster (causal-24)...
+onsets: total=1430  with-runway=1417  theta0(no-runway)=13
+pre-onset hazard h^3_(theta-1): mean=0.640 median=0.659
+
+(a) mean pre-onset hazard by output-position tercile:
+    early (pos): n=  473  hazard=0.680
+      mid (pos): n=  472  hazard=0.668
+     late (pos): n=  472  hazard=0.571
+
+(b) mean pre-onset hazard by span length:
+     short(<= 6): n=  756  hazard=0.691
+       long(> 6): n=  661  hazard=0.582
+
+(c) top pre-onset features separating ANTICIPATED (n=473) vs SURPRISE (n=473) onsets [single-feature AUROC, mean anticip / mean surprise]:
+         window_10_novelty [TEXT]  AUROC=0.797   +0.483 / +0.266
+          window_5_novelty [TEXT]  AUROC=0.788   +0.505 / +0.258
+         window_20_novelty [TEXT]  AUROC=0.783   +0.459 / +0.277
+                    bigram [TEXT]  AUROC=0.246   +0.029 / +0.344
+       running_novel_ratio [TEXT]  AUROC=0.752   +0.405 / +0.279
+         running_ctx_ratio [TEXT]  AUROC=0.248   +0.595 / +0.721
+                    consec [TEXT]  AUROC=0.700   +0.094 / +0.046
+             lm_has_signal [  LM]  AUROC=0.314   +0.393 / +0.761
+                in_context [TEXT]  AUROC=0.319   +0.526 / +0.722
+                  is_novel [TEXT]  AUROC=0.681   +0.474 / +0.278
+
+SUMMARY: of top-8 discriminating pre-onset features, 7/8 are TEXT-drift (vs LM) -> consistent with finding 3 (text-drift precursor); early-vs-late position hazard gradient present.

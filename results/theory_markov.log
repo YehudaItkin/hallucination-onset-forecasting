@@ -1,0 +1,20 @@
+[theory]  device=cuda
+
+label chain (train): P_FF=0.9937 P_HH=0.9019 lambda2=0.8956
+  k |  analytic 1-P_FF^k |  empirical base
+  1 |             0.0063 |          0.0043
+  3 |             0.0189 |          0.0127
+  5 |             0.0313 |          0.0208
+ 10 |             0.0616 |          0.0400
+
+training feature-GRU (causal-24)...
+training N1' label-history GRU (matched capacity)...
+
+  k |  feat-GRU |  N1 label |            margin 95% CI |        N1>0.5 CI
+------------------------------------------------------------------------------
+  1 |     0.808 |     0.658 | [+0.137,+0.165] m=+0.151 | [0.642,0.673]
+  3 |     0.780 |     0.649 | [+0.117,+0.145] m=+0.131 | [0.634,0.664]
+  5 |     0.774 |     0.645 | [+0.115,+0.142] m=+0.129 | [0.630,0.660]
+ 10 |     0.765 |     0.635 | [+0.117,+0.145] m=+0.130 | [0.619,0.649]
+
+GATE-theory: N1'>chance(all k)=True; feature-dynamics>label-history(k3,k5 CI>0)=True -> PASS: features forecast beyond the label chain

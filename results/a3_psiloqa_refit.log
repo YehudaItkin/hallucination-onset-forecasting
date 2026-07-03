@@ -1,0 +1,10 @@
+[A3-psiloqa-refit] in-domain PsiloQA forecasting (own lm_medians)...
+PsiloQA risk tokens: train 149589, test 37591
+
+    k | PsiloQA in-domain |  base% |  (RAGTruth 0.78, zero-shot):
+    1 |             0.789 |   5.1% | RAGTruth 0.810 / zeroshot 0.434
+    3 |             0.740 |  14.3% | RAGTruth 0.783 / zeroshot 0.383
+    5 |             0.741 |  22.3% | RAGTruth 0.775 / zeroshot 0.349
+   10 |             0.756 |  36.1% | RAGTruth 0.767 / zeroshot 0.319
+
+GATE-A3-refit: PsiloQA in-domain AUROC@3 = 0.740 -> signal EXISTS -> transfer-limited (domain-specific)

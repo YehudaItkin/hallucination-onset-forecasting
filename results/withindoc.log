@@ -1,0 +1,10 @@
+[within-doc] training forecaster (causal-24, seed 0)...
+
+    k |  within-doc AUROC (forecaster) | position-only |  ndoc
+------------------------------------------------------------------
+    1 | 0.740  [95% 0.726,0.754]      |         0.553 |   934
+    3 | 0.687  [95% 0.672,0.702]      |         0.545 |   934
+    5 | 0.669  [95% 0.653,0.685]      |         0.537 |   934
+   10 | 0.649  [95% 0.633,0.666]      |         0.516 |   934
+
+Note: any per-document-constant predictor (incl. the ORACLE doc label) = 0.5 within-doc by construction. Forecaster > 0.5 = timing signal no prompt-level model has.

@@ -1,0 +1,15 @@
+[Phase D] training forecaster (causal-24)...
+EVAL docs: clean=879 hallu=472
+
+(k=3)  avert = averted hallucinated tokens / all hallu tokens;  waste = faithful tokens cut / all faithful;  eff = avert/waste
+    FA     policy | stopDocs  avert%  waste%    eff cleanStop%
+--------------------------------------------------------------------
+  0.01   forecast |     1351  100.0%  100.0%   1.00     100.0%
+  0.01      CUSUM |     1021   87.3%   57.7%   1.51      65.2%
+  0.01     random |     1351   59.1%   50.3%   1.18     100.0%
+
+ 0.001   forecast |      261   30.0%   16.2%   1.85       4.8%
+ 0.001      CUSUM |      323   34.2%   13.3%   2.58      11.7%
+ 0.001     random |      261   17.2%   12.2%   1.41       4.8%
+
+GATE-D: forecaster averts more hallucination than CUSUM & random at matched FA in 1/2 budgets -> PASS: lead time -> mitigation headroom

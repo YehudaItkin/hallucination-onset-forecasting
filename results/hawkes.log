@@ -1,0 +1,14 @@
+[hawkes]  device=cuda
+
+  test log-lik/token (higher=better):
+    cov-only            A  = -0.63907
+    cov+frailty         F  = -0.61931
+    exc-only            E  = -0.64927
+    cov+exc             CE = -0.61245   (gain over A: +0.02662)
+    cov+frailty+exc     FE = -0.60818   (gain over F: +0.01113)  <- decisive
+    learned a_j (FE, timescales 1/3/10 tok): [0.6821 0.6738 1.6252]
+
+  permutation null (within-example onset shuffle, 60 draws)...
+    observed FE-F gain = +0.01113;  null mean +0.02598 sd 0.00084;  p = 1.000
+
+GATE-hawkes: exc survives frailty (FE>F)=True; beats permutation null (p<0.01)=False -> NEGATIVE: clustering is covariate/heterogeneity, not contagion
