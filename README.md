@@ -1,7 +1,8 @@
 # Forecasting the Onset of Hallucination
 
-Analysis code for the paper **"Forecasting the Onset of Hallucination: Causal,
-Token-Level, Black-Box Survival Analysis During Generation"** (Igor Itkin, 2026).
+Paper and analysis code for **"Forecasting the Onset of Hallucination: Causal,
+Token-Level, Black-Box Survival Analysis During Generation"** (Igor Itkin, 2026). The
+manuscript is in [`paper.pdf`](paper.pdf); the code reproduces every result in it.
 
 The third paper in a series. Detection asks *whether* a token is hallucinated; the
 [quickest-change companion](https://github.com/YehudaItkin/quickest-hallucination-onset)
