@@ -7,7 +7,7 @@ We reuse the original feature pipeline verbatim (no rewriting):
   - onset_metrics.find_span_onsets  (worktree)
 
 Data (prepared_data, nli_features, lm_features) is READ-ONLY from the
-resilient-rolling-pine worktree of smiles2026. Nothing is written to smiles2026.
+original feature-extraction pipeline. Nothing is written back to it.
 
 Hazard label (survival-style): for each faithful token t, over horizon k,
     y_t^(k) = 1[ some hallucination-span onset o with t < o <= t+k ].
