@@ -73,6 +73,21 @@ onset-detection companion so the lead-time comparison is self-contained.
 | `run_hazard_b_taxonomy.py` | predictability taxonomy of onsets |
 | `run_hazard_d_mitigation.py` | abort-policy mitigation simulation |
 | `run_hazard_c_consistency.py` | self-consistency null (needs consistency features) |
+| `run_hazard_e_dynamics.py` | onset-aligned hazard dynamics with a clean-document control, per-task and per-generator strata, hazard calibration |
+| `run_theory_runway.py` | pre-onset runway and the Proposition 1 early-warning ceiling |
+| `run_m1_sign.py` | cross-corpus sign flip of the feature-to-onset mapping |
+
+Two helpers turn a run's log into the exact figure or table the paper prints, so a
+plotted curve cannot drift from the measured one:
+
+| Helper | Produces |
+| --- | --- |
+| `format_e_dynamics.py` | the onset-aligned hazard figure (`--novelty` for the novelty windows, `--wide` for a single-column layout) |
+| `format_m1_sign.py` | the cross-corpus sign-flip table |
+
+`refcheck.py` encodes each number the paper quotes as an executable contract: a re-run
+that stops reproducing one raises instead of silently changing a claim. `run_m1_sign.py`
+and `run_theory_runway.py` assert through it; `pytest test_refcheck.py` covers it.
 
 `run_hazard_c_consistency.py` additionally requires the black-box self-consistency
 features (SelfCheckGPT resamples) from the companion work; see the paper for details.

@@ -1,0 +1,34 @@
+
+  idx  grp |  corr_RAG  corr_PsiloQA  flip?
+--------------------------------------------
+    0  text |  -0.021    +0.086     FLIP
+    1  text |  +0.000    +0.007   
+    2  text |  -0.011    -0.033   
+    3  text |  +0.009    -0.049   
+    5  text |  -0.047    +0.163     FLIP
+    6  text |  +0.047    -0.163     FLIP
+    7  text |  +0.021    -0.086     FLIP
+    8  text |  -0.002    +0.007   
+    9  text |  +0.003    +0.005   
+   10  text |  +0.040    -0.139     FLIP
+   11  text |  +0.046    -0.152     FLIP
+   12  text |  +0.049    -0.163     FLIP
+   13  text |  +0.005    +0.012   
+   14  text |  -0.002    -0.001   
+   15  text |  -0.035    +0.081     FLIP
+   16  text |  -0.028    +0.064     FLIP
+   17  text |  -0.004    -0.018   
+   18  text |  +0.021    -0.084     FLIP
+   27    lm |  +0.009    +0.011   
+   28    lm |  -0.005    -0.003   
+   29    lm |  -0.013    -0.018   
+   30    lm |  -0.011    -0.020   
+   31    lm |  -0.040    +0.047     FLIP
+   32    lm |  +0.016    +0.006   
+
+sign flips (|r|>0.02 both): 11 of 24 causal features
+  text flips: 10/18   lm flips: 1/6
+  mean corr_RAG  text=+0.005 lm=-0.007
+  mean corr_PsiloQA text=-0.026 lm=+0.004
+[refcheck] OK  text-feature sign flips (paper 10/18): 10.0000 (> 7)
+EXIT=0
