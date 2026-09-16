@@ -1,0 +1,11 @@
+[A3-psiloqa] training RAGTruth forecaster (causal-24)...
+building PsiloQA (RAGTruth-train lm_medians -> zero-shot)...
+
+    k | RAGTruth in-domain |  PsiloQA zero-shot | PsiloQA base% |   risk n
+--------------------------------------------------------------------------
+    1 |        0.810/0.029 |        0.434/0.048 |         5.11% |    37591
+    3 |        0.783/0.061 |        0.383/0.113 |        14.34% |    37591
+    5 |        0.775/0.093 |        0.349/0.168 |        22.27% |    37591
+   10 |        0.767/0.161 |        0.319/0.274 |        36.09% |    37591
+
+GATE-A3-psiloqa: zero-shot AUROC@3 = 0.383  -> transfer-limited (honest negative)

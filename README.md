@@ -76,6 +76,8 @@ onset-detection companion so the lead-time comparison is self-contained.
 | `run_hazard_e_dynamics.py` | onset-aligned hazard dynamics with a clean-document control, per-task and per-generator strata, hazard calibration |
 | `run_theory_runway.py` | pre-onset runway and the Proposition 1 early-warning ceiling |
 | `run_m1_sign.py` | cross-corpus sign flip of the feature-to-onset mapping |
+| `run_m1_withindoc_seeds.py` | within-document AUROC over 5 seeds (the headline 0.687 +/- 0.003) |
+| `run_m1_diag.py` | transfer diagnostics: re-normalization control for the zero-shot inversion |
 
 Two helpers turn a run's log into the exact figure or table the paper prints, so a
 plotted curve cannot drift from the measured one:

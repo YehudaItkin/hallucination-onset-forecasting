@@ -1,0 +1,14 @@
+[M1] training RAGTruth forecaster (causal-24)...
+[M1] Variant Z: RAGTruth med + RAGTruth mean/std ...
+[M1] Variant N: PsiloQA med + PsiloQA-train mean/std (no refit) ...
+
+  k  | RAGTruth in-dom | Z zero-shot | N re-normalized (same weights)
+------------------------------------------------------------------
+   1 |     0.810       |   0.434     |   0.430
+   3 |     0.783       |   0.383     |   0.408
+   5 |     0.775       |   0.349     |   0.380
+  10 |     0.767       |   0.319     |   0.363
+
+verdict@3: Z=0.383  N=0.408  -> genuine reversal (N still <0.5)
+[refcheck] OK  zero-shot AUROC@3 (paper 0.383): 0.3827 (= 0.383 +- 0.03)
+[refcheck] OK  re-normalized AUROC@3 stays below chance: 0.4076 (< 0.5)
